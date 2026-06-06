@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    min-width: 320px;
+}
+
+.shapka {
+    background-color: #373c3f;
+    position: relative;
+    height: 60px;
+}
+
+.header-in {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-text {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.skryt-chekbox {
+    display: none;
+}
+
+.knopka-menu {
+    color: white;
+    background-color: #202529;
+    font-size: 24px;
+    height: 100%;
+    width: 60px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.spisok-menu {
+    display: flex;
+    list-style: none;
+}
+
+.spisok-menu li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.spisok-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.glavniy-blok {
+    max-width: 1024px;
+    height: 830px;
+    background: linear-gradient(to right, #17b3c5, #0993ab);
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.verh-bannera {
+    height: 580px;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.banner-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    height: 210px;
+}
+
+.banner-info h1 {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: white;
+}
+
+.banner-info p {
+    font-size: 36px;
+    color: #a6d4de;
+    margin-top: auto;
+}
+
+.strelochka {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 36px;
+    color: white;
+}
+
+.temniy-blok {
+    height: 250px;
+    background-color: #27212c;
+    color: #8f809e;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.text-robin {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.strela-v-temnom {
+    background-color: #bc3183;
+    color: white;
+    font-size: 46px;
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blok-kartinok {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.fioletoviy-kvadrat {
+    flex: 1;
+    height: 341px;
+    background-color: #5b0fa1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fio-strela {
+    color: white;
+    font-size: 24px;
+}
+
+.kartinka-konteiner {
+    flex: 1;
+    height: 341px;
+    overflow: hidden;
+}
+
+.kartinka-konteiner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.podval {
+    max-width: 1024px;
+    min-height: 560px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+.podval-info {
+    margin: 50px 90px;
+}
+
+.podval-info h2 {
+    color: #088ca5;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.kolonki {
+    display: flex;
+    gap: 20px;
+}
+
+.odna-kolonka {
+    flex: 1;
+}
+
+.podval p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1023px) {
+    .glavniy-blok {
+        height: auto;
+    }
+    .verh-bannera {
+        padding-left: 40px;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .banner-info h1 {
+        font-size: 44px;
+    }
+    .banner-info p {
+        font-size: 26px;
+    }
+    .text-robin {
+        font-size: 24px;
+    }
+    .strela-v-temnom {
+        width: 150px;
+    }
+    .fioletoviy-kvadrat, .kartinka-konteiner {
+        height: 250px;
+    }
+    .podval-info {
+        margin: 30px 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .knopka-menu {
+        display: flex;
+    }
+    .spisok-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #373c3f;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        display: none; /* Скрыто */
+        z-index: 2000;
+    }
+    .skryt-chekbox:checked ~ .spisok-menu {
+        display: flex;
+    }
+    .spisok-menu li {
+        margin: 0;
+    }
+    .blok-kartinok {
+        flex-direction: column;
+    }
+    .fioletoviy-kvadrat, .kartinka-konteiner {
+        width: 100%;
+        height: 320px;
+    }
+    .kolonki {
+        flex-direction: column;
+    }
+}
